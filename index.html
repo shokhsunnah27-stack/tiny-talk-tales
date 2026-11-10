@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tiny Talk Tales</title>
+<meta name="description" content="৩ থেকে ১২ বছরের শিশুদের জন্য ছোট ইংরেজি গল্প, শেখার ভিডিও আর ABC ব্লক। প্রতিটি লাইনের সঙ্গে বাংলা অর্থ ও বাংলা উচ্চারণ।">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tiny Talk Tales">
+<meta property="og:description" content="ছোটদের ইংরেজি শেখার গল্প-ঘর: গল্প, ভিডিও আর ABC ব্লক, সঙ্গে বাংলা অর্থ ও উচ্চারণ।">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/playful.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="#top" aria-label="Tiny Talk Tales">
+      <img class="logo-avatar" src="assets/avatar.jpg" width="44" height="44" alt="">
+      <span>Tiny Talk Tales<small>ছোটদের ইংরেজি শেখার গল্প-ঘর</small></span>
+    </a>
+    <nav class="nav" aria-label="প্রধান মেনু">
+      <a href="#about">পরিচয়</a>
+      <a href="#story">গল্প</a>
+      <a href="#videos">ভিডিও</a>
+      <a href="#levels">বয়স অনুযায়ী</a>
+      <a href="#parents">অভিভাবকদের জন্য</a>
+      <a href="#faq">প্রশ্নোত্তর</a>
+    </nav>
+    <div class="head-end">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="আলো/অন্ধকার থিম বদলান">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      </button>
+      <a class="btn btn-sun head-cta" href="#contact">শুরু করুন</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <span class="eyebrow">৩ থেকে ১২ বছরের জন্য</span>
+      <h1 style="margin-top:14px">গল্প শুনে শুনে <span class="hl">ইংরেজি</span> শেখা, খেলার মতোই মজার</h1>
+      <p class="lead">ছোট ছোট ইংরেজি গল্প আর শেখার ভিডিও। প্রতিটি লাইনের সঙ্গে আছে বাংলা অর্থ ও বাংলা উচ্চারণ, তাই অভিভাবক ইংরেজি না জানলেও সন্তানের পাশে বসে একসঙ্গে শিখতে পারেন।</p>
+      <div class="hero-cta">
+        <a class="btn btn-sun" href="#story">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 7 4.5z"/></svg>
+          আজকের গল্প শুনুন
+        </a>
+        <a class="btn" href="#levels">বয়স অনুযায়ী পথ দেখুন</a>
+      </div>
+      <ul class="topic-row" aria-label="যা যা শিখবে">
+        <li>ইংরেজি গল্প</li><li>শেখার ভিডিও</li><li>ABC অক্ষর</li><li>প্রতিদিনের কথা</li>
+      </ul>
+    </div>
+
+    <div class="stage">
+      <div class="wordcard" id="wc">
+        <span class="tapme">শব্দটা শুনতে ছোঁও!</span>
+        <div class="wc-art art" id="wcArt"></div>
+        <div class="wc-en" id="wcEn"></div>
+        <div class="wc-bn"><b id="wcBn"></b> &middot; <span id="wcSay"></span></div>
+        <div class="wc-row">
+          <button class="round" id="wcPrev" type="button" aria-label="আগের শব্দ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="speak" id="wcSpeak" type="button">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4z"/><path d="M15 8.5a5 5 0 0 1 0 7M17.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            শুনুন
+          </button>
+          <button class="round" id="wcNext" type="button" aria-label="পরের শব্দ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+        <div class="pips" id="wcPips" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT / PROFILE -->
+  <section id="about" class="sec" style="padding-top:0">
+    <div class="profile">
+      <figure class="profile-pic rv">
+        <img src="assets/brand.jpg" width="1200" height="1200" loading="lazy" alt="রংধনু, রঙিন ABC বোর্ড, ছেলে, মেয়ে আর একটি ভালুক নিয়ে ছোটদের শেখার পোস্টার">
+        <span class="spark s1" aria-hidden="true"></span><span class="spark s2" aria-hidden="true"></span><span class="spark s3" aria-hidden="true"></span>
+      </figure>
+      <div class="profile-body rv">
+        <span class="eyebrow">আমাদের পরিচয়</span>
+        <h2>ছোটদের ইংরেজি শেখার গল্প-ঘর</h2>
+        <p class="lead">৩ থেকে ১২ বছরের শিশুদের জন্য ছোট ইংরেজি গল্প, শেখার ভিডিও আর ABC ব্লক। প্রতিটি লাইনের সঙ্গে বাংলা অর্থ ও বাংলা উচ্চারণ আছে, তাই অভিভাবক ইংরেজি না জানলেও সন্তানের পাশে বসে একসঙ্গে শিখতে পারেন।</p>
+        <ul class="pills" aria-label="যা যা শিখবে">
+          <li>ইংরেজি গল্প</li><li>শেখার ভিডিও</li><li>ABC অক্ষর</li><li>প্রতিদিনের কথা</li>
+        </ul>
+        <div class="hero-cta">
+          <a class="btn btn-sun" href="#story">আজকের গল্প শুনুন</a>
+          <a class="btn" href="#contact">যোগাযোগ করুন</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" class="sec" style="padding-top:clamp(24px,4vw,48px)">
+    <div class="sec-head">
+      <span class="eyebrow">আজকের গল্প</span>
+      <h2>একটা ছোট্ট গল্প, চারটা পাতা</h2>
+      <p>প্রতিটি শব্দে ছুঁলেই ইংরেজি উচ্চারণ শোনা যাবে। নিচে বাংলা উচ্চারণ আর অর্থ দেওয়া আছে।</p>
+    </div>
+
+    <div class="story">
+      <div class="scene" id="scene" data-page="1" role="img" aria-label="রাতের আকাশে বড় চাঁদ আর মিমি নামের একটি মেয়ে">
+        <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#121722"/><stop offset="1" stop-color="#242C40"/></linearGradient></defs>
+          <rect width="480" height="300" fill="url(#sky)"/>
+          <g fill="#F2F2EE">
+            <circle class="tw" cx="40" cy="40" r="2"/><circle class="tw" cx="120" cy="70" r="1.6"/><circle class="tw" cx="210" cy="30" r="2.4"/>
+            <circle class="tw" cx="250" cy="90" r="1.6"/><circle class="tw" cx="440" cy="40" r="2"/><circle class="tw" cx="400" cy="160" r="1.6"/>
+            <circle class="tw" cx="70" cy="120" r="1.6"/>
+          </g>
+          <g class="stars2" fill="#FFC247">
+            <polygon points="170,40 174,50 185,51 176,58 179,69 170,63 161,69 164,58 155,51 166,50"/>
+            <polygon points="440,100 443,107 451,108 445,113 447,121 440,117 433,121 435,113 429,108 437,107"/>
+            <polygon points="60,160 63,167 71,168 65,173 67,181 60,177 53,181 55,173 49,168 57,167"/>
+          </g>
+          <circle cx="335" cy="110" r="80" fill="#F6D58B" opacity=".08"/>
+          <circle cx="335" cy="110" r="58" fill="#F6D58B"/>
+          <circle cx="315" cy="95" r="9" fill="#E5BE6E" opacity=".75"/><circle cx="360" cy="138" r="7" fill="#E5BE6E" opacity=".75"/><circle cx="352" cy="80" r="5" fill="#E5BE6E" opacity=".75"/>
+          <g class="face">
+            <circle cx="318" cy="108" r="4.5" fill="#3B3320"/><circle cx="352" cy="108" r="4.5" fill="#3B3320"/>
+            <path d="M318 128q17 15 34 0" fill="none" stroke="#3B3320" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="308" cy="122" r="6" fill="#FFB21A" opacity=".5"/><circle cx="362" cy="122" r="6" fill="#FFB21A" opacity=".5"/>
+          </g>
+          <path d="M0 250q90-50 190-14t170-8q70-24 120 8V300H0z" fill="#1A202C"/>
+          <path d="M0 275q120-34 230-6t250-10V300H0z" fill="#121721"/>
+          <g>
+            <path d="M95 192h30l16 60H79z" fill="#FFB21A"/>
+            <rect x="99" y="250" width="8" height="14" rx="3" fill="#8A5A3A"/><rect x="113" y="250" width="8" height="14" rx="3" fill="#8A5A3A"/>
+            <g class="arm"><line x1="125" y1="205" x2="146" y2="233" stroke="#C58C5E" stroke-width="8" stroke-linecap="round"/></g>
+            <circle cx="110" cy="172" r="20" fill="#C58C5E"/>
+            <path d="M90 170a20 20 0 0 1 40 0c-8-8-18-12-40 0z" fill="#0B0D11"/>
+            <circle cx="90" cy="168" r="7" fill="#0B0D11"/><circle cx="130" cy="168" r="7" fill="#0B0D11"/>
+            <circle cx="104" cy="174" r="2.4" fill="#0B0D11"/><circle cx="117" cy="174" r="2.4" fill="#0B0D11"/>
+            <path d="M104 181q6 5 12 0" fill="none" stroke="#0B0D11" stroke-width="2" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+
+      <div>
+        <div class="story-meta"><span class="story-title">Mimi and the Moon</span><span id="pgLabel"></span></div>
+        <div class="en-line" id="enLine" aria-live="polite"></div>
+        <p class="bn-pron" id="bnPron"></p>
+        <p class="bn-mean" id="bnMean"></p>
+        <div class="story-ctl">
+          <button class="speak" id="stSpeak" type="button">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4z"/><path d="M15 8.5a5 5 0 0 1 0 7M17.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            পুরো লাইন শুনুন
+          </button>
+          <button class="round" id="stPrev" type="button" aria-label="আগের পাতা"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="round" id="stNext" type="button" aria-label="পরের পাতা"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+        <p class="hint">কোনো একটি ইংরেজি শব্দে ছুঁয়ে শুধু সেই শব্দটা শুনুন।</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABC -->
+  <section id="abc" class="sec" style="padding-top:0">
+    <div class="sec-head">
+      <span class="eyebrow">ছোটদের জন্য</span>
+      <h2>ABC ব্লক: ছুঁয়ে শোনো</h2>
+      <p>একটা অক্ষরে ছোঁও। অক্ষরের নাম, তার একটা শব্দ আর বাংলা অর্থ জানা হয়ে যাবে।</p>
+    </div>
+    <div class="abc">
+      <div class="abc-show" aria-live="polite">
+        <div class="big" id="abcBig">A</div>
+        <div class="word" id="abcWord">Apple</div>
+        <div class="mean" id="abcMean">আপেল</div>
+      </div>
+      <div class="blocks" id="blocks"></div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section id="videos" class="sec" style="padding-top:0">
+    <div class="sec-head">
+      <span class="eyebrow">শেখার ভিডিও</span>
+      <h2>দেখে দেখে শেখার ছোট ছোট ভিডিও</h2>
+      <p>গান, ছড়া আর প্রতিদিনের কথা নিয়ে ভিডিও। বয়স বেছে নিলে শুধু সেই বয়সের ভিডিও দেখা যাবে।</p>
+    </div>
+    <div class="filters" role="group" aria-label="বয়স অনুযায়ী ফিল্টার">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">সব</button>
+      <button class="chip" type="button" data-f="3-5" aria-pressed="false">৩–৫ বছর</button>
+      <button class="chip" type="button" data-f="6-8" aria-pressed="false">৬–৮ বছর</button>
+      <button class="chip" type="button" data-f="9-12" aria-pressed="false">৯–১২ বছর</button>
+    </div>
+    <div class="vgrid" id="vgrid">
+      <button class="vcard" type="button" data-age="3-5"><span class="vthumb"><span class="cap">A B C<br>গান</span><span class="play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 7 4.5z"/></svg></span></span><span class="vtitle">ABC গান: অক্ষরের সঙ্গে নাচ</span><span class="vsub"><span class="vage">৩–৫ বছর</span>সুরে সুরে ২৬টি অক্ষর</span></button>
+      <button class="vcard" type="button" data-age="3-5"><span class="vthumb"><span class="cap">Red<br>Blue</span><span class="play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 7 4.5z"/></svg></span></span><span class="vtitle">রঙের নাম শিখি</span><span class="vsub"><span class="vage">৩–৫ বছর</span>লাল, নীল, হলুদ ও আরও</span></button>
+      <button class="vcard" type="button" data-age="3-5"><span class="vthumb"><span class="cap">Meow!</span><span class="play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 7 4.5z"/></svg></span></span><span class="vtitle">কে কী ডাকে?</span><span class="vsub"><span class="vage">৩–৫ বছর</span>প্রাণীর নাম ও ডাক</span></button>
+      <button class="vcard" type="button" data-age="6-8"><span class="vthumb"><span class="cap">Mom<br>Dad</span><span class="play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 7 4.5z"/></svg></span></span><span class="vtitle">আমার পরিবার</span><span class="vsub"><span class="vage">৬–৮ বছর</span>পরিবারের সবার পরিচয়</span></button>
+      <button class="vcard" type="button" data-age="6-8"><span class="vthumb"><span class="cap">Wake<br>up!</span><span class="play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 7 4.5z"/></svg></span></span><span class="vtitle">আমার একটা দিন</span><span class="vsub"><span class="vage">৬–৮ বছর</span>সকাল থেকে রাত পর্যন্ত</span></button>
+      <button class="vcard" type="button" data-age="6-8"><span class="vthumb"><span class="cap">Twinkle<br>star</span><span class="play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 7 4.5z"/></svg></span></span><span class="vtitle">তারার ছড়া</span><span class="vsub"><span class="vage">৬–৮ বছর</span>ছড়ার সুরে নতুন শব্দ</span></button>
+      <button class="vcard" type="button" data-age="9-12"><span class="vthumb"><span class="cap">I am<br>Rafi.</span><span class="play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 7 4.5z"/></svg></span></span><span class="vtitle">ইংরেজিতে নিজের পরিচয় দিই</span><span class="vsub"><span class="vage">৯–১২ বছর</span>বন্ধুর সঙ্গে প্রথম কথা</span></button>
+      <button class="vcard" type="button" data-age="9-12"><span class="vthumb"><span class="cap">School<br>talk</span><span class="play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 7 4.5z"/></svg></span></span><span class="vtitle">স্কুলে ইংরেজিতে কথা</span><span class="vsub"><span class="vage">৯–১২ বছর</span>শিক্ষক ও সহপাঠীর সঙ্গে সহজ কথা</span></button>
+    </div>
+  </section>
+
+  <!-- LEVELS -->
+  <section id="levels" class="sec" style="padding-top:0">
+    <div class="sec-head">
+      <span class="eyebrow">বয়স অনুযায়ী ধাপ</span>
+      <h2>দরজার গায়ে উচ্চতা মাপার মতো, প্রতি বছর একটু একটু বাড়ে</h2>
+      <p>সন্তানের বয়স বেছে নিন। দেখে নিন কোন ধাপ থেকে শুরু করলে সবচেয়ে ভালো হয়।</p>
+    </div>
+    <div class="picker" role="group" aria-label="সন্তানের বয়স">
+      <strong>আমার সন্তানের বয়স</strong>
+      <button class="chip" type="button" data-a="0" aria-pressed="true">৩–৫ বছর</button>
+      <button class="chip" type="button" data-a="1" aria-pressed="false">৬–৮ বছর</button>
+      <button class="chip" type="button" data-a="2" aria-pressed="false">৯–১২ বছর</button>
+    </div>
+    <div class="steps" id="steps">
+      <div class="step">
+        <div class="age">৩–৫<small>বছর</small></div>
+        <h3>প্রথম শব্দের ধাপ</h3>
+        <ul><li>ABC অক্ষর ও তাদের শব্দ</li><li>ছড়া আর গানের সঙ্গে ছোট শব্দ</li><li>রং, ফল, প্রাণীর নাম</li></ul>
+        <p class="goal">লক্ষ্য: ইংরেজি শুনে মজা পাওয়া</p>
+      </div>
+      <div class="step">
+        <div class="age">৬–৮<small>বছর</small></div>
+        <h3>বাক্য আর গল্পের ধাপ</h3>
+        <ul><li>ছোট গল্প শুনে বুঝে নেওয়া</li><li>Hello, Thank you, Please-এর মতো বাক্য</li><li>পরিবার, স্কুল, খাবার নিয়ে কথা</li></ul>
+        <p class="goal">লক্ষ্য: নিজে ছোট বাক্য বলা</p>
+      </div>
+      <div class="step">
+        <div class="age">৯–১২<small>বছর</small></div>
+        <h3>কথা বলা আর পড়ার ধাপ</h3>
+        <ul><li>লম্বা গল্প নিজে পড়া</li><li>নিজের পরিচয় ও পছন্দ নিয়ে কথা</li><li>বন্ধুর সঙ্গে সহজ কথোপকথন</li><li>নতুন শব্দ থেকে নিজের বাক্য লেখা</li></ul>
+        <p class="goal">লক্ষ্য: ভয় ছাড়া ইংরেজিতে কথা বলা</p>
+      </div>
+    </div>
+    <p class="reco" id="reco"></p>
+  </section>
+
+  <!-- PARENTS -->
+  <section id="parents" class="sec" style="padding-top:0">
+    <div class="parents">
+      <div>
+        <span class="eyebrow">অভিভাবকদের জন্য</span>
+        <h2 style="font-size:clamp(2rem,4.4vw,3.2rem);letter-spacing:-.02em;margin-top:14px">আপনি ইংরেজি না জানলেও, সন্তানের পাশে বসতে পারবেন</h2>
+        <div class="points">
+          <div class="point"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></div><div><h3>প্রতিটি লাইনে বাংলা অর্থ</h3><p>গল্পের প্রতিটি ইংরেজি লাইনের নিচেই বাংলায় অর্থ লেখা, তাই কী শুনছেন তা সবসময় বুঝতে পারবেন।</p></div></div>
+          <div class="point"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4z"/><path d="M15.5 9a4 4 0 0 1 0 6"/></svg></div><div><h3>বাংলা অক্ষরে উচ্চারণ</h3><p>“Good morning” পড়তে গিয়ে আটকে গেলে নিচে দেখুন “গুড মর্নিং”। সঙ্গে সঙ্গে শুনেও নিতে পারবেন।</p></div></div>
+          <div class="point"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2.5h6"/></svg></div><div><h3>দিনে মাত্র ১০ মিনিট</h3><p>ছোট ছোট গল্প আর ভিডিও, তাই রোজকার রুটিনে সহজেই জায়গা হয়ে যায়।</p></div></div>
+        </div>
+      </div>
+      <div class="routine">
+        <h3>রোজকার ১০ মিনিটের রুটিন</h3>
+        <p class="sub">একসঙ্গে বসে করার মতো তিনটি ধাপ</p>
+        <div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <ol class="rt">
+          <li><span class="min">৩ মিনিট</span><span><b>গল্প শোনা।</b> একটা পাতা শুনুন, বাংলা অর্থ পড়ুন।</span></li>
+          <li><span class="min">৩ মিনিট</span><span><b>শব্দ বলা।</b> তিনটি নতুন শব্দ সন্তানের সঙ্গে বলুন।</span></li>
+          <li><span class="min">৪ মিনিট</span><span><b>ভিডিও দেখা।</b> একসঙ্গে গান করুন বা ছড়া বলুন।</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="phrases">
+      <h3>আজই বলতে পারেন এমন চারটি বাক্য</h3>
+      <p>ছুঁয়ে শুনুন, তারপর সন্তানকে নিয়ে একসঙ্গে বলুন।</p>
+      <div class="pgrid" id="pgrid"></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="sec" style="padding-top:0">
+    <div class="sec-head">
+      <span class="eyebrow">আমাদের সেবা</span>
+      <h2>একটি জায়গায় শেখার চারটি উপায়</h2>
+      <p>গল্প, ভিডিও, শব্দ-খেলা আর অভিভাবকদের গাইড, সব একসঙ্গে।</p>
+    </div>
+    <div class="svc">
+      <div class="svc-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C7 4 9.5 4 12 6c2.5-2 5-2 8-.5V19c-3-1.5-5.5-1.5-8 .5-2.5-2-5-2-8-.5z"/><path d="M12 6v13.5"/></svg></div><h3>ইংরেজি গল্প</h3><p>ছোট ছোট গল্প, প্রতিটি শব্দ ছুঁয়ে শোনা যায়। সঙ্গে বাংলা অর্থ ও বাংলা উচ্চারণ।</p><span class="ph-chip" data-ph="price">[মূল্য বা প্যাকেজ যুক্ত করুন]</span></div>
+      <div class="svc-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></svg></div><h3>শেখার ভিডিও</h3><p>গান, ছড়া আর প্রতিদিনের কথা নিয়ে ভিডিও, বয়স অনুযায়ী সাজানো।</p><span class="ph-chip" data-ph="price">[মূল্য বা প্যাকেজ যুক্ত করুন]</span></div>
+      <div class="svc-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg></div><h3>ABC ও শব্দ-খেলা</h3><p>অক্ষর আর শব্দের ইন্টারঅ্যাকটিভ ব্লক, যেখানে ছুঁলেই উচ্চারণ শোনা যায়।</p><span class="ph-chip" data-ph="price">[মূল্য বা প্যাকেজ যুক্ত করুন]</span></div>
+      <div class="svc-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9.5" r="2.4"/><path d="M3 19c.5-3.5 3-5 6-5s5.5 1.5 6 5M15.5 14.5c2.5-.2 4.6 1 5 4"/></svg></div><h3>অভিভাবক গাইড</h3><p>রোজকার ১০ মিনিটের রুটিন আর প্রতিদিনের ইংরেজি বাক্যের তালিকা।</p><span class="ph-chip" data-ph="price">[মূল্য বা প্যাকেজ যুক্ত করুন]</span></div>
+    </div>
+    <p class="edit-note">ডাশ-দাগের ঘরগুলো আপনার নিজের তথ্য বসানোর জায়গা।</p>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="reviews" class="sec" style="padding-top:0">
+    <div class="sec-head">
+      <span class="eyebrow">অভিভাবকদের মতামত</span>
+      <h2>অভিভাবকরা কী বলছেন</h2>
+      <p>এই জায়গায় প্রকৃত অভিভাবকদের অনুমতি নিয়ে নেওয়া মতামত যুক্ত করুন।</p>
+    </div>
+    <div class="tms" id="tms"></div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="sec" style="padding-top:0">
+    <div class="sec-head">
+      <span class="eyebrow">প্রশ্নোত্তর</span>
+      <h2>অভিভাবকদের সাধারণ প্রশ্ন</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>আমি ইংরেজি ভালো জানি না। সন্তানকে কীভাবে সাহায্য করব?</summary><p>কোনো সমস্যা নেই। প্রতিটি গল্পের প্রতিটি লাইনে বাংলা অর্থ ও বাংলা উচ্চারণ দেওয়া আছে। আপনি শুধু পাশে বসে শুনুন আর সন্তানের সঙ্গে একবার বলার চেষ্টা করুন। এভাবে আপনিও শিখবেন।</p></details>
+      <details><summary>৩ বছরের শিশু কি এটা দিয়ে শুরু করতে পারে?</summary><p>পারে। ছোটদের জন্য ABC ব্লক, ছড়া আর রং-প্রাণীর নাম দিয়ে শুরু করা ভালো। মনে রাখবেন, এই বয়সে লক্ষ্য হলো শেখার আগে ইংরেজির প্রতি ভালোবাসা তৈরি করা।</p></details>
+      <details><summary>দিনে কতক্ষণ সময় দিলে ভালো হয়?</summary><p>দিনে ১০ থেকে ১৫ মিনিটই যথেষ্ট। অল্প সময়, কিন্তু প্রতিদিন। তাতে শিশুরা ক্লান্ত না হয়ে নতুন শব্দ মনে রাখতে পারে।</p></details>
+      <details><summary>কোন ধাপ থেকে শুরু করব?</summary><p>সাধারণত সন্তানের বয়স অনুযায়ী ধাপ বেছে নিলেই চলে। তবে যদি সে একদম নতুন হয়, বয়স যাই হোক, ৩–৫ ধাপের ABC আর ছোট শব্দ দিয়ে শুরু করতে পারেন। কয়েকদিন পরেই বুঝবেন পরের ধাপে যাওয়ার সময় হয়েছে কি না।</p></details>
+      <details><summary>ভিডিও দেখার সময় অভিভাবকের কি পাশে থাকা দরকার?</summary><p>৩–৮ বছর বয়সীদের জন্য পাশে থাকা সবচেয়ে ভালো। আপনি গানে বা ছড়ায় অংশ নিলে শেখা অনেক বেশি আনন্দের হয়। বড়রা নিজে নিজেও দেখতে পারে।</p></details>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="sec" style="padding-top:0">
+    <div class="contact">
+      <div>
+        <span class="eyebrow">শুরু করুন</span>
+        <h2 style="margin-top:10px">আজই প্রথম গল্পটা একসঙ্গে শুনুন</h2>
+        <p class="lead">সন্তানের বয়স জানিয়ে একটি বার্তা তৈরি করুন। বার্তাটি কপি করে নিচের যোগাযোগের মাধ্যমে আমাদের পাঠান।</p>
+        <ul class="cl" id="cl"></ul>
+      </div>
+      <form class="form" id="leadForm" novalidate>
+        <h3>বার্তা তৈরি করুন</h3>
+        <div class="row2">
+          <div class="field"><label for="fName">আপনার নাম</label><input class="inp" id="fName" name="name" type="text" autocomplete="name" placeholder="যেমন: রহিমা বেগম"></div>
+          <div class="field"><label for="fAge">সন্তানের বয়স</label>
+            <select class="inp" id="fAge" name="age"><option>৩–৫ বছর</option><option selected>৬–৮ বছর</option><option>৯–১২ বছর</option></select></div>
+        </div>
+        <div class="field"><label for="fWant">কী নিয়ে জানতে চান</label>
+          <select class="inp" id="fWant" name="want"><option>ইংরেজি গল্প</option><option>শেখার ভিডিও</option><option>গল্প ও ভিডিও দুটোই</option></select></div>
+        <button class="btn btn-sun" type="submit">বার্তা তৈরি করুন</button>
+        <div id="outBox" hidden>
+          <div class="field"><label for="outMsg">আপনার বার্তা</label><textarea class="inp" id="outMsg" readonly></textarea></div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:12px">
+            <button class="btn" type="button" id="copyBtn">বার্তা কপি করুন</button>
+            <span class="out-note">কপি করে নিচের যেকোনো যোগাযোগ-মাধ্যমে পাঠান।</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="wrap foot">
+  <a class="logo" href="#top" aria-label="Tiny Talk Tales">
+    <img class="logo-avatar" src="assets/avatar.jpg" width="44" height="44" alt="">
+    <span>Tiny Talk Tales<small>&copy; ২০২৬ সর্বস্বত্ব সংরক্ষিত</small></span>
+  </a>
+  <nav aria-label="ফুটার মেনু">
+    <a href="#about">পরিচয়</a><a href="#story">গল্প</a><a href="#videos">ভিডিও</a><a href="#levels">বয়স অনুযায়ী</a><a href="#parents">অভিভাবক</a><a href="#faq">প্রশ্নোত্তর</a>
+  </nav>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/site-data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/fun.js"></script>
+
+</body>
+</html>
